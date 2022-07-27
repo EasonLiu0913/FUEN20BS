@@ -12,12 +12,15 @@
             height: 500px;
             background-color: #ccc;
             display: grid;
-            grid-template-columns: 240px auto;
-            Grid-template-rows: 100px 200px 1fr;
+            grid-template-columns: 1fr 1fr;
+            Grid-template-rows: 100px 1fr 1fr;
+            row-gap: 5px;
+            column-gap: 5px;
+            gap:5px 10px;
         }
 
         .box{
-            outline: 1px solid red;
+            outline: 1px solid blue;
         }
     </style>
 </head>
@@ -28,8 +31,6 @@
         <div class="box">box2</div>
         <div class="box">box3</div>
         <div class="box">box4</div>
-        <div class="box">box5</div>
-        <div class="box">box6</div>
     </div>
 </body>
 

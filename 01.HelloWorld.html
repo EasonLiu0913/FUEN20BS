@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="./01.HelloWorld.css"> -->
+
+    <style>
+        /* #myH1{
+            color: red;
+        } */
+
+        /* .myClass{
+            color: blueviolet;
+        } */
+
+        h1 {
+            color: aqua;
+        }
+
+        /* .box3 ~ div.box5{
+            color: lightblue;
+            background-color: brown;
+        } */
+        /* .wrap>div.box4{
+            color: lightblue;
+            background-color: brown;
+        } */
+
+        * {
+            color: red;
+        }
+
+        a[href="https://google.com"] {
+            color: blue;
+        }
+
+        img[src="./imgs/1.jpg"]{
+            width: 100%;
+        }
+
+        /* 偽類:不存在的 class */
+        ul > :nth-child(1)  {
+            color: blue;
+        }
+
+        /* 偽元素 */
+        .price{
+            display: inline-block;
+        }
+        
+        .price::before{
+            content: '$';
+        }
+
+        .price::after{
+            content: '元';
+        }
+
+        .demo{
+            width: 400px;
+            height: 400px;
+            background-color: #ccc;
+            position: relative;
+        }
+
+        .demo::before{
+            content: '';
+            display: block;
+            width: 100px;
+            height: 50px;
+            background-color: blueviolet;
+            position: absolute;
+            right: -30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="demo">
+        <!-- before -->
+    </div>
+
+
+    <h1 class="price">
+        <!-- before -->
+        100
+        <!-- after -->
+    </h1>
+
+
+
+    <h1 class="price">
+        <!-- before -->
+        500
+        <!-- after -->
+    </h1>
+
+    <!-- ul.menu>li*6>a[href="#"]{link$} -->
+
+    <ul>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+        <li>li4</li>
+        <li>li5</li>
+        <li>li6</li>
+    </ul>
+
+    <h1 id="myH1" class="myClass">Hello World</h1>
+
+    <!-- .wrap>.box${box$}*6 -->
+
+    <div class="wrap">
+        <div class="box1">
+            <div class="box4">box4</div>
+        </div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+        <div class="box5">box5</div>
+        <div class="box6">box6</div>
+    </div>
+
+    <div class="box7">box7</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

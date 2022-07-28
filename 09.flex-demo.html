@@ -179,32 +179,6 @@
         </div> -->
     </section>
 
-    <script>
-
-        fetch('./product-data.json')
-        .then((data)=>data.json())
-        .then((result)=>{
-            console.log(result)
-        
-            result.forEach(element => {
-            const newCol = document.createElement('div');
-            newCol.className = "col-25"
-            newCol.innerHTML = ` <div class="myCard">
-                <div class="img-wrap">
-                    <img src="${element.img}" alt="">
-                </div>
-
-                <h3>${element.product_name}</h3>
-                <p>${element.price}</p>
-            </div>`
-
-            const productArea = document.querySelector('#product-area')
-            productArea.append(newCol)
-
-        });
-        })
-
-        
-    </script>
+   
 </body>
 </html>

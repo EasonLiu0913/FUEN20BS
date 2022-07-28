@@ -1,0 +1,11 @@
+1.資料的處理(Data: string, number, boolean, array, object, ...)
+
+2.畫面的處理(DOM節點)
+Document
+
+3.事件的處理(互動)
+Event
+
+4.Ajax(取得後端資料) Fetch
+
+5.非同步 (callback function, promise, async await)

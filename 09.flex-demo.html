@@ -88,42 +88,45 @@
             })
             .then(function (myJson) {
                 console.log(myJson);
-                console.log(typeof(myJson));
+                console.log(typeof(myJson))
 
                 const productArea = document.querySelector('#productArea')
                 let html = '';
-                myJson.forEach(element => {
+                // myJson.forEach(element => {
+                //     html += `<div class="col-25">
+                //                 <div class="myCard">
+                //                     <div class="img-wrap">
+                //                         <img src="${element.img}" alt="">
+                //                     </div>
+
+                //                     <h3>${element.product_name}</h3>
+                //                     <p>${element.price}</p>
+                //                 </div>
+                //             </div>`;
+                // });
+                
+                
+                
+
+                for (let i = 0; i < myJson.length; i ++){
                     html += `<div class="col-25">
                                 <div class="myCard">
                                     <div class="img-wrap">
-                                        <img src="${element.img}" alt="">
+                                        <img src="${myJson[i].img}" alt="">
                                     </div>
 
-                                    <h3>${element.product_name}</h3>
-                                    <p>${element.price}</p>
+                                    <h3>${myJson[i].product_name}</h3>
+                                    <p>${myJson[i].price}</p>
                                 </div>
                             </div>`;
-                });
+                }
+
                 productArea.innerHTML = html;
-                
-                
-
-                // for (let i = 0; i < myJson.length; i ++){
-                    // html += `<div class="col-25">
-                    //             <div class="myCard">
-                    //                 <div class="img-wrap">
-                    //                     <img src="./imgs/1.jpg" alt="">
-                    //                 </div>
-
-                    //                 <h3>Lounge Tunic / Black</h3>
-                    //                 <p>$50.00</p>
-                    //             </div>
-                    //         </div>`;
-                // }
-
-                
 
             });
+    
+    
+            
     </script>
 </body>
 

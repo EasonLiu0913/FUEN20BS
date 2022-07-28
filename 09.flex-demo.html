@@ -26,8 +26,18 @@
     </style>
 </head>
 <body>
-    <section class="d-flex flex-wrap">
+    <section id="product-area" class="d-flex flex-wrap">
         <div class="col-25">
+            <div class="myCard">
+                <div class="img-wrap">
+                    <img src="./imgs/1.jpg" alt="">
+                </div>
+
+                <h3>Lounge Tunic / Black</h3>
+                <p>$50.00</p>
+            </div>
+        </div>
+        <!-- <div class="col-25">
             <div class="myCard">
                 <div class="img-wrap">
                     <img src="./imgs/1.jpg" alt="">
@@ -166,17 +176,35 @@
                 <h3>Lounge Tunic / Black</h3>
                 <p>$50.00</p>
             </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
+        </div> -->
     </section>
+
+    <script>
+
+        fetch('./product-data.json')
+        .then((data)=>data.json())
+        .then((result)=>{
+            console.log(result)
+        
+            result.forEach(element => {
+            const newCol = document.createElement('div');
+            newCol.className = "col-25"
+            newCol.innerHTML = ` <div class="myCard">
+                <div class="img-wrap">
+                    <img src="${element.img}" alt="">
+                </div>
+
+                <h3>${element.product_name}</h3>
+                <p>${element.price}</p>
+            </div>`
+
+            const productArea = document.querySelector('#product-area')
+            productArea.append(newCol)
+
+        });
+        })
+
+        
+    </script>
 </body>
 </html>

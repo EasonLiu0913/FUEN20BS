@@ -1,0 +1,77 @@
+[
+    {
+        "product_name":"Lounge Tunic / Black",
+        "price":"$50.00",
+        "img":"./Alameda-imgs/pic_0.jpg"
+    },
+    {
+        "product_name":"Lounge Tunic / Blue",
+        "price":"$50.00",
+        "img":"./Alameda-imgs/pic_1.jpg"
+    },
+    {
+        "product_name":"Lounge Tunic / Cream",
+        "price":"$40.00",
+        "img":"./Alameda-imgs/pic_2.jpg"
+    },
+    {
+        "product_name":"Sonia Skirt",
+        "price":"$50.00",
+        "img":"./Alameda-imgs/pic_3.jpg"
+    },
+    {
+        "product_name":"Sonia Dress",
+        "price":"$50.00",
+        "img":"./Alameda-imgs/pic_4.jpg"
+    },
+    {
+        "product_name":"Wide pant",
+        "price":"$50.00",
+        "img":"./Alameda-imgs/pic_5.jpg"
+    },
+    {
+        "product_name":"Haori Jacket",
+        "price":"$50.00",
+        "img":"./Alameda-imgs/pic_6.jpg"
+    },
+    {
+        "product_name":"Wide pant / Blue",
+        "price":"$50.00",
+        "img":"./Alameda-imgs/pic_7.jpg"
+    },
+    {
+        "product_name":"Jane Skirt",
+        "price":"$50.00",
+        "img":"./Alameda-imgs/pic_8.jpg"
+    },
+    {
+        "product_name":"Romy Trousers",
+        "price":"$50.00",
+        "img":"./Alameda-imgs/pic_9.jpg"
+    },
+    {
+        "product_name":"Poplin Chef Shirt",
+        "price":"$40.00",
+        "img":"./Alameda-imgs/pic_10.jpg"
+    },
+    {
+        "product_name":"Jacky Trousers",
+        "price":"$50.00",
+        "img":"./Alameda-imgs/pic_11.jpg"
+    },
+    {
+        "product_name":"Lisa Shirt",
+        "price":"$50.00",
+        "img":"./Alameda-imgs/pic_12.jpg"
+    },
+    {
+        "product_name":"Terra Cotta Studio Top",
+        "price":"$40.00",
+        "img":"./Alameda-imgs/pic_13.jpg"
+    },
+    {
+        "product_name":"Linen Top / Blue",
+        "price":"$40.00",
+        "img":"./Alameda-imgs/pic_14.jpg"
+    }
+]

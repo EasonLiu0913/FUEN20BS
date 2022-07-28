@@ -66,8 +66,8 @@
 </head>
 
 <body>
-    <section id="product-area" class="d-flex flex-wrap">
-        <div class="col-25">
+    <section id="productArea" class="d-flex flex-wrap">
+        <!-- <div class="col-25">
             <div class="myCard">
                 <div class="img-wrap">
                     <img src="./imgs/1.jpg" alt="">
@@ -76,157 +76,53 @@
                 <h3>Lounge Tunic / Black</h3>
                 <p>$50.00</p>
             </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
+        </div> -->
 
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
-        <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
     </section>
 
     <script>
 
         fetch('http://127.0.0.1:5500/product-data.json')
-            .then(function (res) {
-                return res.json();
+            .then(function (response) {
+                return response.json();
             })
-            .then(function (myAlex) {
-                console.log(myAlex);
+            .then(function (myJson) {
+                console.log(myJson);
+                console.log(typeof(myJson));
+
+                const productArea = document.querySelector('#productArea')
+                let html = '';
+                myJson.forEach(element => {
+                    html += `<div class="col-25">
+                                <div class="myCard">
+                                    <div class="img-wrap">
+                                        <img src="${element.img}" alt="">
+                                    </div>
+
+                                    <h3>${element.product_name}</h3>
+                                    <p>${element.price}</p>
+                                </div>
+                            </div>`;
+                });
+                productArea.innerHTML = html;
+                
+                
+
+                // for (let i = 0; i < myJson.length; i ++){
+                    // html += `<div class="col-25">
+                    //             <div class="myCard">
+                    //                 <div class="img-wrap">
+                    //                     <img src="./imgs/1.jpg" alt="">
+                    //                 </div>
+
+                    //                 <h3>Lounge Tunic / Black</h3>
+                    //                 <p>$50.00</p>
+                    //             </div>
+                    //         </div>`;
+                // }
+
+                
+
             });
     </script>
 </body>

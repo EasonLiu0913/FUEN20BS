@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .wrap{
+            width: 600px;
+            height: 500px;
+            background-color: #ccc;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            align-content: stretch;
+            flex-wrap: wrap;
+            /* gap:10px; */
+        }
+
+        .box{
+            /* height: 200px; */
+            /* height: 30%; */
+            background-color: #ffa;
+            outline: 1px solid red;
+            /* flex-grow: 1; */
+            flex-shrink: 1;
+            /* max-width: 200px;
+            flex-basis: 150px; */
+            width: 500px;
+            /* min-width: 100px; */
+        }
+
+        .box1{
+            /* width: 100px; */
+            /* order: 1; */
+        }
+
+        .box2{
+            width: 153px;
+            /* flex-grow: 2; */
+            /* flex-shrink: 0; */
+            order: 2;
+            background-color: #aaf;
+        }
+
+        .box3{
+            width: 201px;
+            /* align-self: flex-start; */
+            order: 1;
+            background-color: #faf;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+    </section>
+
+</body>
+</html>

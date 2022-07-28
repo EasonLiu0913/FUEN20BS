@@ -1,30 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flex demo</title>
     <style>
-        .d-flex{
+        * {
+            box-sizing: border-box;
+        }
+
+        /* CSS-reset, CSS-Normalize, bootstrap:reboot */
+        body {
+            margin: 0px;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .d-flex {
             display: flex;
         }
 
-        .flex-wrap{
+        .flex-wrap {
             flex-wrap: wrap;
         }
 
-        .col-25{
-            width: 25%;
+        .col-25 {
+            width: 100%;
             outline: 1px solid red;
+            /* BOX-MODEL */
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 15px;
         }
 
-        .img-wrap > img{
+        @media screen and (min-width:576px) {
+            .col-25 {
+                width: 50%;
+            }
+        }
+
+        @media screen and (min-width:992px) {
+            .col-25 {
+                width: 33.333333%;
+            }
+        }
+
+        .myCard {
+            width: 100%;
+            outline: 1px solid blue;
+        }
+
+        .img-wrap>img {
             width: 100%;
             height: auto;
         }
     </style>
 </head>
+
 <body>
     <section id="product-area" class="d-flex flex-wrap">
         <div class="col-25">
@@ -37,16 +77,6 @@
                 <p>$50.00</p>
             </div>
         </div>
-        <!-- <div class="col-25">
-            <div class="myCard">
-                <div class="img-wrap">
-                    <img src="./imgs/1.jpg" alt="">
-                </div>
-
-                <h3>Lounge Tunic / Black</h3>
-                <p>$50.00</p>
-            </div>
-        </div>
         <div class="col-25">
             <div class="myCard">
                 <div class="img-wrap">
@@ -176,9 +206,29 @@
                 <h3>Lounge Tunic / Black</h3>
                 <p>$50.00</p>
             </div>
-        </div> -->
+        </div>
+        <div class="col-25">
+            <div class="myCard">
+                <div class="img-wrap">
+                    <img src="./imgs/1.jpg" alt="">
+                </div>
+
+                <h3>Lounge Tunic / Black</h3>
+                <p>$50.00</p>
+            </div>
+        </div>
     </section>
 
-   
+    <script>
+
+        fetch('http://127.0.0.1:5500/product-data.json')
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (myAlex) {
+                console.log(myAlex);
+            });
+    </script>
 </body>
+
 </html>

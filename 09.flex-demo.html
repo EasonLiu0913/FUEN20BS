@@ -62,10 +62,21 @@
             width: 100%;
             height: auto;
         }
+
+        .red{
+            color: red;
+        }
     </style>
 </head>
 
 <body>
+    <!-- <button>Click</button>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        
+    </ul> -->
+
     <section id="productArea" class="d-flex flex-wrap">
         <!-- <div class="col-25">
             <div class="myCard">
@@ -81,14 +92,34 @@
     </section>
 
     <script>
+        // const btn = document.querySelector('button')
+        // const ul = document.querySelector('ul')
+
+        // btn.addEventListener('click',function(){
+        //     console.log('hi');
+        //     const newLi = document.createElement('li')
+        //     newLi.innerHTML = 'item 3';
+        //     // newLi.style.color = 'red';
+        //     newLi.classList.add('red');
+        //     ul.append(newLi);
+        // })
+
+        // const arrayA = [0,1,2,3,4,5,6];
+
+        // const filterResult = arrayA.filter((item)=>{
+        //     return item % 2 === 0;
+        // })
+
+        // console.log('filterResult',filterResult);
+
 
         fetch('http://127.0.0.1:5500/product-data.json')
             .then(function (response) {
                 return response.json();
             })
             .then(function (myJson) {
-                console.log(myJson);
-                console.log(typeof(myJson))
+                // console.log(myJson);
+                // console.log(typeof(myJson))
 
                 const productArea = document.querySelector('#productArea')
                 let html = '';

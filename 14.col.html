@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>col</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+            integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+        .myDiv{
+            background-color: #faf;
+            height: 100px;
+        }
+
+        .container-fluid{
+            background-color: #ffa;
+            height: 100px;
+        }
+
+        .container{
+            background-color: #aaf;
+            /* height: 100px; */
+            margin-bottom: 20px;
+            border: 1px solid yellow;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            border:1px solid red;
+        }
+
+        .rwdcol{
+            background-color: #ffa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            container-fluid
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col border">col</div>
+            <div class="col border">col</div>
+            <div class="col border">col</div>
+            <div class="col border">col</div>
+            <div class="col border">col</div>
+        </div>
+
+        <div class="row">
+            <div class="col-3 border">col3</div>
+            <div class="col-3 border">col3</div>
+            <div class="col-3 border">col3</div>
+            <div class="col-3 border">col3</div>
+            <div class="col-3 border">col3</div>
+            <div class="col-3 border">col3</div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 border">col6</div>
+            <div class="col-6 border">col6</div>
+            <div class="col-6 border">col6</div>
+            <div class="col-6 border">col6</div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 border">col12</div>
+            <div class="col-12 border">col12</div>
+            <div class="col-12 border">col12</div>
+            <div class="col-12 border">col12</div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3 border rwdcol">RWD COL</div>
+            <div class="col-12 col-sm-6 col-lg-3 border rwdcol">
+                <div class="myCard">
+                    <div class="img-wrap">
+                        <img src="https://i.ytimg.com/vi/V9C0DivEa4s/hq720.jpg?sqp=-oaymwEcCK4FEIIDSEbyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAcdlzfY-l5wcAbRPqhW3zZUh2AEg" alt="" style="width: 100%;">
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <div class="user-img" style="width: 40px;height:40px;">
+                                <img src="https://yt3.ggpht.com/ytc/AKedOLS-3hDJFh58x8r802WBjdzq9_KnKhPGJ3efK4Zo=s68-c-k-c0x00ffffff-no-rj" alt="" style="width: 100%;">
+                            </div>
+                        </div>
+                        <div>
+                            <div>冰箱頂上擺一物，身家過億不是夢，乞丐也能發大財！#大佬你好啊</div>
+                            <div>
+                               <span >大佬你好啊</span><span  >•</span><span  >觀看次數：90萬次</span><span >•</span><span  >5 個月前</span>
+                            </div>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><path d="M12,16.5c0.83,0,1.5,0.67,1.5,1.5s-0.67,1.5-1.5,1.5s-1.5-0.67-1.5-1.5S11.17,16.5,12,16.5z M10.5,12 c0,0.83,0.67,1.5,1.5,1.5s1.5-0.67,1.5-1.5s-0.67-1.5-1.5-1.5S10.5,11.17,10.5,12z M10.5,6c0,0.83,0.67,1.5,1.5,1.5 s1.5-0.67,1.5-1.5S12.83,4.5,12,4.5S10.5,5.17,10.5,6z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 border rwdcol">RWD COL</div>
+            <div class="col-12 col-sm-6 col-lg-3 border rwdcol">RWD COL</div>
+            <div class="col-12 col-sm-6 col-lg-3 border rwdcol">RWD COL</div>
+            <div class="col-12 col-sm-6 col-lg-3 border rwdcol">RWD COL</div>
+            <div class="col-12 col-sm-6 col-lg-3 border rwdcol">RWD COL</div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+</body>
+</html>
